@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+  		
+  <validators>
+  	<!-- 校验field：name -->
+  	<field name="user.name">
+  		<field-validator typr="requiredstring" short-circuit="true">
+  			<message>用户名不能为空</message>
+  		</field-validator>
+  	</field>
+  	
+  	<!-- 校验field：password -->
+  	<field name="user.password">
+  		<field-validator typr="requiredstring" short-circuit="true">
+  			<message>密码不能为空</message>
+  		</field-validator>
+  	</field>
+  
+  </validators>
+
