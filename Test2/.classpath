@@ -19,6 +19,6 @@
 			<attribute name="owner.project.facets" value="jst.web.jstl"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Administrator/Downloads/jdbc/sqljdbc41.jar"/>
+	<classpathentry kind="lib" path="E:/STUDY/综合实训/JavaEE框架开发实训/课内实验/jdbc/sqljdbc41.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- LoginAction的bean -->
+	<bean id="loginAction" class="action.LoginAction" scope="prototype">
+		<property name="usersDao"><!-- 调用set方法给ud赋值，实例化 -->
+			<ref bean="usersDao"/>
+		</property>
+	</bean>
+	<!-- registerAction的bean -->
+	<bean id="registAction" class="action.registaction" scope="prototype">
+		<property name="usersDao">
+			<ref bean="usersDao"/>
+		</property>
+	</bean>			
+	<!-- Buyticketaction的bean -->
+	<bean id="buyticketaction" class="action.Buyticketaction" scope="prototype">
+		<property name="ticketsDao">
+			<ref bean="ticketsDao"/>
+		</property>
+	</bean>						
+	<!-- DeleteTicketAction的bean -->
+	<bean id="deleteTicketAction" class="action.DeleteTicketAction" scope="prototype">
+		<property name="ticketsDao">
+			<ref bean="ticketsDao"/>
+		</property>
+	</bean>			
+	<!-- QueryAction的bean -->
+	<bean id="queryAction" class="action.QueryAction" scope="prototype" >
+		<property name="ticketsDao">
+			<ref bean="ticketsDao"/>
+		</property>
+	</bean>			
+	<!-- QueryActionById的bean -->
+	<bean id="queryActionById" class="action.QueryActionById" scope="prototype">
+		<property name="ticketsDao">
+			<ref bean="ticketsDao"/>
+		</property>
+	</bean>		
+	<!-- UpdateTicketAction的bean -->
+	<bean id="updateTicketAction" class="action.UpdateTicketAction" scope="prototype">
+		<property name="ticketsDao">
+			<ref bean="ticketsDao"/>
+		</property>
+	</bean>		
+<!-- ChangePasswordAction的bean -->
+	<bean id="changePasswordAction" class="action.ChangePasswordAction" scope="prototype">
+		<property name="usersDao">
+			<ref bean="usersDao"/>
+		</property>
+	</bean>		
+</beans>

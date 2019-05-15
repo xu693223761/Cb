@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="model.Ticket" table ="Tickets">
+		<id name="id" column = "id">
+			<generator class="native"/>
+		</id>
+		<property name="name" length="20"/>
+		<property name="sex"  length="2"/>
+		<property name="Originating_City" length="50"/>
+		<property name="End_City" length="50"/>
+		<property name="idcard" length="20"/>
+	
+	</class>
+</hibernate-mapping>
