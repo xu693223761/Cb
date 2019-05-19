@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="com.clothes.cart.model.CartItem" table ="cart_item">
+		<id name="id" column = "id">
+			<generator class="native"/>
+		</id>
+		<property name="name" />
+		<property name="img"  />
+		<property name="count" />
+		<property name="price" />
+		<property name="item_id"  />
+		<many-to-one name="color" class="com.clothes.item.model.Color"
+   			 cascade="save-update" fetch="select" lazy="false"
+   			 column="color_id" not-null="true" unique="true" />
+		<many-to-one name="size" class="com.clothes.item.model.Size"
+   			 cascade="save-update" fetch="select" 
+   			 column="size_id" not-null="true" unique="true" lazy="false"/>
+		<property name="cart_id" />
+	</class>
+</hibernate-mapping>

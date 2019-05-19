@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.clothes.cart.model.Cart" table="cart">
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+		<property name="total_price" />
+		<property name="user_id" />
+<!-- 		<list name="items" table="cart_item" lazy="false">
+			<key column="cart_id" /> 集合的关键字段
+			<list-index />  集合的索引字段
+			<element type="com.clothes.cart.model.CartItem" not-null="true" />
+		</list> -->
+		<set name = "items" table = "cart_item" lazy="false">
+        	<key column="cart_id"></key>
+        	<one-to-many class="com.clothes.cart.model.CartItem"></one-to-many>
+        </set>
+	</class>
+</hibernate-mapping>
